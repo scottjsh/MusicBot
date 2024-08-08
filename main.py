@@ -25,7 +25,7 @@ class Translator(discord.app_commands.Translator):
             return func.LOCAL_LANGS[str(locale)].get(string.message, None)
         return None
 
-class Vocard(commands.Bot):
+class BSG(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -157,7 +157,7 @@ member_cache = discord.MemberCacheFlags(
     joined=False
 )
 
-bot = Vocard(
+bot = BSG(
     command_prefix=get_prefix,
     help_command=None,
     tree_cls=CommandCheck,

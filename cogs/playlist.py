@@ -1,6 +1,6 @@
 """MIT License
 
-Copyright (c) 2023 - present Vocard Development
+Copyright (c) 2023 - present BSG Development
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -90,7 +90,7 @@ async def search_playlist(url: str, requester: discord.Member, time_needed: bool
 class Playlists(commands.Cog, name="playlist"):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
-        self.description = "This is the Vocard playlist system. You can save your favorites and use Vocard to play on any server."
+        self.description = "This is the BSG playlist system. You can save your favorites and use BSG to play on any server."
 
     async def playlist_autocomplete(self, interaction: discord.Interaction, current: str) -> list:
         playlists_raw: dict[str, dict] = await get_user(interaction.user.id, 'playlist')

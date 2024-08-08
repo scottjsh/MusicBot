@@ -2,13 +2,13 @@
     <img src="https://img.shields.io/discord/811542332678996008?color=7289DA&label=Support&logo=discord&style=for-the-badge" alt="Discord">
 </a>
 
-# Vocard (Discord Music Bot)
-> Vocard is a simple custom Disocrd Music Bot built with Python & [discord.py](https://discordpy.readthedocs.io/en/stable/) <br>
+# BSG (Discord Music Bot)
+> BSG is a simple custom Disocrd Music Bot built with Python & [discord.py](https://discordpy.readthedocs.io/en/stable/) <br>
 Demo: [Discord Bot Demo](https://discord.com/api/oauth2/authorize?client_id=890399639008866355&permissions=36708608&scope=bot%20applications.commands),
 [Dashboard Demo](https://vocard.xyz)
 
 # Host for you?
-<a href="https://www.patreon.com/Vocard">
+<a href="https://www.patreon.com/BSG">
     <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dendel%26type%3Dpatrons&style=for-the-badge" alt="Patreon">
 </a>
 
@@ -25,8 +25,8 @@ Click on the image below to watch the tutorial on Youtube.
 <img src="https://user-images.githubusercontent.com/94597336/227766416-22ae3d91-40d9-44c0-bde1-9d40bd54c3af.png">
 
 ### Dashboard
-<img src="https://github.com/ChocoMeow/Vocard/assets/94597336/53f31f9f-57c5-452c-8317-114125ddbf03">
-<img src="https://github.com/ChocoMeow/Vocard/assets/94597336/b2acd87a-e910-4247-8d5a-418f3782f63f">
+<img src="https://github.com/ChocoMeow/BSG/assets/94597336/53f31f9f-57c5-452c-8317-114125ddbf03">
+<img src="https://github.com/ChocoMeow/BSG/assets/94597336/b2acd87a-e910-4247-8d5a-418f3782f63f">
 
 ## Requirements
 * [Python 3.10+](https://www.python.org/downloads/)
@@ -34,8 +34,8 @@ Click on the image below to watch the tutorial on Youtube.
 
 ## Quick Start
 ```sh
-git clone https://github.com/ChocoMeow/Vocard.git  #Clone the repository
-cd Vocard                                          #Go to the directory
+git clone https://github.com/ChocoMeow/BSG.git  #Clone the repository
+cd BSG                                          #Go to the directory
 python -m pip install -r requirements.txt          #Install required packages
 ```
 After installing all packages, you must configure the bot before to start! [How To Configure](https://docs.vocard.xyz/configuration/)<br />

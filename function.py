@@ -46,7 +46,7 @@ USERS_BASE: dict[str, Any] = {
 
 ALLOWED_MENTIONS = discord.AllowedMentions().none()
 
-#-------------- Vocard Functions --------------
+#-------------- BSG Functions --------------
 def open_json(path: str) -> dict:
     try:
         with open(os.path.join(ROOT_DIR, path), encoding="utf8") as json_file:
