@@ -1,26 +1,3 @@
-"""MIT License
-
-Copyright (c) 2023 - present BSG Development
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
 import voicelink
 import asyncio
 import discord
@@ -29,7 +6,7 @@ import function as func
 from discord.ext import commands
 
 class Listeners(commands.Cog):
-    """Music Cog."""
+    """음악 관련 Cog입니다."""
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -38,7 +15,7 @@ class Listeners(commands.Cog):
         bot.loop.create_task(self.start_nodes())
         
     async def start_nodes(self) -> None:
-        """Connect and intiate nodes."""
+        """노드를 연결하고 초기화합니다."""
         await self.bot.wait_until_ready()
         for n in func.settings.nodes.values():
             try:
@@ -49,7 +26,7 @@ class Listeners(commands.Cog):
                     **n
                 )
             except Exception as e:
-                print(f'Node {n["identifier"]} is not able to connect! - Reason: {e}')
+                print(f'노드 {n["identifier"]}가 연결할 수 없습니다! - 이유: {e}')
 
     @commands.Cog.listener()
     async def on_voicelink_track_end(self, player: voicelink.Player, track, _):
@@ -64,7 +41,7 @@ class Listeners(commands.Cog):
     async def on_voicelink_track_exception(self, player: voicelink.Player, track, error: dict):
         try:
             player._track_is_stuck = True
-            await player.context.send(f"{error['message']}! The next song will begin in the next 5 seconds.", delete_after=10)
+            await player.context.send(f"{error['message']}! 다음 곡이 5초 후에 시작됩니다.", delete_after=10)
         except:
             pass
 

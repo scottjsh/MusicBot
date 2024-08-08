@@ -22,9 +22,9 @@ SOFTWARE.
 """
 
 __version__ = "1.4"
-__author__ = 'BSG Development, Choco'
+__author__ = 'BSG Development, scottjsh'
 __license__ = "MIT"
-__copyright__ = "Copyright 2023 (c) BSG Development, Choco"
+__copyright__ = "Copyright 2023 (c) BSG Development, scottjsh"
 
 from .enums import SearchType, LoopType
 from .events import *
