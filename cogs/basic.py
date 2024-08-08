@@ -833,7 +833,7 @@ class Basic(commands.Cog):
 
         check = not player.settings.get("autoplay", False)
         player.settings['autoplay'] = check
-        await send(ctx, "자동 재생", await get_lang(ctx.guild.id, "활성화됨" if check else "비활성화됨"))
+        await send(ctx, "자동 재생", await get_lang(ctx.guild.id, "enabled" if check else "disabled"))
 
         if not player.is_playing:
             await player.do_next()
@@ -841,10 +841,10 @@ class Basic(commands.Cog):
     @commands.hybrid_command(name="help", aliases=get_aliases("help"))
     @app_commands.autocomplete(category=help_autocomplete)
     @commands.dynamic_cooldown(cooldown_check, commands.BucketType.guild)
-    async def help(self, ctx: commands.Context, category: str = "News") -> None:
+    async def help(self, ctx: commands.Context, category: str = "정보") -> None:
         "백설기의 모든 명령어를 나열합니다."
         if category not in self.bot.cogs:
-            category = "News"
+            category = "정보"
         view = HelpView(self.bot, ctx.author)
         embed = view.build_embed(category)
         view.response = await ctx.send(embed=embed, view=view)
